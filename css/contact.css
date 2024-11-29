@@ -45,6 +45,42 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     align-items: center;
+    white-space: nowrap;
+}
+
+#nav-button {
+    background-color: #ffffff;
+    border: none;
+}
+
+.navbar-scroll {
+    display: grid;
+    grid-template-columns: 20px 8fr 3fr 20px;
+    align-items: center;
+}
+
+.contact-scroll {
+    grid-column: 3/5;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    color: black;
+    border-radius: 5px;
+    width: auto;
+    margin-top: 0.2em;
+    padding: 20px;
+    height: 6em;
+    text-decoration: none;
+    font-family: "Roboto-regular";
+    box-shadow: 1px 1px 2px #e6e6e6;
+}
+
+.show {
+    display: grid;
 }
 
 .contact a {
@@ -139,16 +175,22 @@ input {
 .form-input {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    align-items: center; /* Centrer verticalement chaque cellule */
+    align-items: center;
+    /* Centrer verticalement chaque cellule */
     gap: 10px;
 }
 
 .form-subject label {
-    display: grid; /* Pas besoin de flex ici */
-    align-items: center; /* Centrer verticalement le texte */
-    justify-items: center; /* Centrer horizontalement */
-    text-align: center; /* Juste au cas où */
-    min-height: 2.5em; /* Maintenir une hauteur fixe */
+    display: grid;
+    /* Pas besoin de flex ici */
+    align-items: center;
+    /* Centrer verticalement le texte */
+    justify-items: center;
+    /* Centrer horizontalement */
+    text-align: center;
+    /* Juste au cas où */
+    min-height: 2.5em;
+    /* Maintenir une hauteur fixe */
     border: 2px solid #f3f3f3;
     background-color: #f3f3f3;
     border-radius: 10px;
@@ -190,6 +232,47 @@ input {
 
     .icon {
         font-size: 1.5em;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-title {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .form-name {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 0em 0.5em;
+    }
+
+    .form-mail {
+        grid-area: 3 / 1 / 4 / 2;
+        padding: 0em 0.5em;
+    }
+
+    .form-subject {
+        grid-area: 4 / 1 / 5 / 2;
+        padding: 0em 0.5em;
+    }
+
+    .form-message {
+        grid-area: 5 / 1 / 6 / 2;
+        padding: 0em 0.5em;
+    }
+
+    .form-file {
+        grid-area: 6 / 1 / 7 / 2;
+        padding: 0em 0.5em;
+    }
+
+    .form-buttons {
+        grid-area: 7 / 1 / 8 / 2;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -241,5 +324,6 @@ input {
     font-weight: 500;
     height: 3em;
     width: 16em;
-    cursor: pointer;;
+    cursor: pointer;
+    ;
 }

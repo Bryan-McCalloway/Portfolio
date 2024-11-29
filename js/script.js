@@ -53,3 +53,12 @@ function selectSubjectKeyboard() {
         })
     }
 }
+
+buttonOpenNavbar();
+function buttonOpenNavbar() {
+    const navButton = document.getElementById("nav-button");
+    navButton.addEventListener("click", () => {
+        const contactScroll = document.querySelector(".contact-scroll");
+        contactScroll.classList.toggle("show");
+    })
+}
