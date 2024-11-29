@@ -40,3 +40,16 @@ buttonSubmitForm.addEventListener("click", () => {
     // Envoyer les données
     xhr.send(JSON.stringify(contactFormFields));
 });
+
+selectSubjectKeyboard();
+function selectSubjectKeyboard() {
+    const formLabel = document.querySelectorAll(".form-input label");
+    for(let i = 0; i < formLabel.length; i++) {
+        console.log(formLabel[i]);
+        formLabel[i].addEventListener("keydown", () => {
+            const subjectForm = document.getElementById(formLabel[i].htmlFor);
+            console.log(subjectForm);
+            subjectForm.checked = true;
+        })
+    }
+}
