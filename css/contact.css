@@ -77,6 +77,8 @@ a {
     text-decoration: none;
     font-family: "Roboto-regular";
     box-shadow: 1px 1px 2px #e6e6e6;
+    white-space: nowrap;
+    width: auto;
 }
 
 .show {
@@ -221,6 +223,10 @@ input {
 }
 
 @media (max-width: 681px) {
+    .section {
+        padding: 5px;
+    }
+
     .contact {
         display: none;
     }
@@ -234,6 +240,9 @@ input {
         font-size: 1.5em;
     }
 
+    .title {
+        margin: 0.2em 0em;
+    }
     .contact-form {
         grid-template-columns: 1fr;
     }
